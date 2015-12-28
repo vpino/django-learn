@@ -2,6 +2,7 @@
 {% block title %} Question Detail {% endblock %}
 {% block content %}
     <h2>{{ question.asunto }} ?</h2>
+        <p> <a href="{% url "question_edit" question.id %}"> Edit this question </a> </p>
         <p> <b> Publicado: </b> {{ question.fecha_publicacion|date:"D, d/m/Y" }} </p>
 
         <p>

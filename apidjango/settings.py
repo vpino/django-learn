@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
-
+from django.core.urlresolvers import reverse_lazy
 import os
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'askquestions',
+    'social.apps.django_app.default',
 
 ]
 
@@ -58,7 +60,7 @@ ROOT_URLCONF = 'apidjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/Laura Gonzalez/Documents/django/apidjango/templates'],
+        'DIRS': ['/home/victor/Documentos/django-learn/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,6 +85,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+LOGIN_URL = reverse_lazy('login')
 
 
 # Password validation
@@ -122,3 +126,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#AUTHENTICATION_BACKENDS = (
+        #'social.backends.facebook.FacebookAppOAuth2',
+        #'social.backends.facebook.FacebookOAuth2',
+        #'social.backends.twitter.TwitterOAuth'
+        #'django.contrib.auth.backends.ModelBackend',
+#)
+
+#Variable que guarda la url a la cual va a redirigir luego del login
+#SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+
+#SOCIAL_AUTH_TWITTER_KEY = 'lFXDp57YfpItYLjFcuDzeORQ9'
+#SOCIAL_AUTH_TWITTER_SECRET = 'BQwjtEVcRYIyfPn6jdplfpot6vCdGLOctbndntdxACwY3fq07p'
+
+#SOCIAL_AUTH_FACEBOOK_KEY = '741344079298725'
+#SOCIAL_AUTH_FACEBOOK_SECRET = 'df131bec466285f5239d307b903546b5'
+
+
+
+
