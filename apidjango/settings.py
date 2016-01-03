@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'askquestions',
-    'social.apps.django_app.default',
-
+    'apis'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -60,7 +59,7 @@ ROOT_URLCONF = 'apidjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/victor/Documentos/django-learn/templates'],
+        'DIRS': ['/Users/Laura Gonzalez/Documents/django/apidjango/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,6 +125,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(
+        BASE_DIR, "static"
+    ),
+)
 
 #AUTHENTICATION_BACKENDS = (
         #'social.backends.facebook.FacebookAppOAuth2',

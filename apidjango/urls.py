@@ -24,9 +24,11 @@ urlpatterns = [
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^question/create/$', 'askquestions.views.question_create', name='question_create'),
     url(r'^question/edit/(?P<question_id>\d+)/$', 'askquestions.views.question_edit', name='question_edit'),
-    url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^login/$', 'apidjango.views.login_page', name='login'),
     url(r'^$', 'apidjango.views.homepage', name='homepage'),
     url(r'^logout/$', 'apidjango.views.logout_view', name='logout'),
+    url(r'^generic/$', 'apis.views.package_generic', name='generic'),
+    url(r'^generic/create/$', 'apis.views.generic_create', name='generic_create'),
+    url(r'^generic/edit/(?P<package_id>\d+)/$', 'apis.views.generic_edit', name='generic_edit'),
 
 ]
