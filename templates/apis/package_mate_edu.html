@@ -1,9 +1,9 @@
 {% extends "baseapis.html" %}
-{% block title %} Paquetes Genericos {% endblock %}
+{% block title %} Paquetes Mate {% endblock %}
 {% block content %}
 <br><br>
 <p class ="center-align">
-    <a  href="{% url "generic_create" %}" class="btn-floating btn-large waves-effect ">
+    <a  href="{% url "package_mate_edu_create" %}" class="btn-floating btn-large waves-effect ">
         <i class="material-icons">add</i>
 
     </a>
@@ -11,7 +11,7 @@
 </p> <br><br>
 
 
-    <h5 class="center-align"> Lista de Paquetes Genericos </h5> <br><br>
+    <h5 class="center-align"> Lista de Paquetes de Mate Educativo </h5> <br><br>
 
     <div class="container">
         <div class="row">
@@ -28,12 +28,12 @@
                     </thead>
 
                     <tbody>
-                        {% for generic in generic %}
+                        {% for mate in mate %}
 
                             <tr>
-                                <td> <span class="title"> {{ generic.Nombre }} </span> </td>
-                                <td> <a href="{% url "generic_edit" generic.id %}"> <i class="small material-icons">settings</i> </a>
-                                     <a href="{% url "generic_edit" generic.id %}"> <i class="small material-icons">delete</i> </a>
+                                <td> <span class="title"> {{ mate.Nombre }} </span> </td>
+                                <td> <a href="{% url "package_mate_edu_edit" mate.id %}"> <i class="small material-icons">settings</i> </a>
+                                     <a href="{% url "package_mate_edu_edit" mate.id %}"> <i class="small material-icons">delete</i> </a>
                                 </td>
                               </tr>
 

@@ -23,37 +23,77 @@ class PackageGenericForm(forms.ModelForm):
         #Le pasamos que campos del modelo va a crear
         fields = "__all__"
 
-class PackageGenericEdu(forms.ModelForm):
+class PackageGenericEduForm(forms.ModelForm):
     class Meta:
         #Le pasamos el modelo al cual le va hacer el formulario
         model = PackageGenericEdu
+        #
+        widgets={"Nombre":forms.TextInput(attrs={'placeholder':'Paquete','name':'nombre',
+                                               'id':'Nombre',
+                                               'class':'validate'}),
+                 }
+        labels = {
+            'Nombre': _('Nombre del Paquete'),
+        }
         #Le pasamos que campos del modelo va a crear
         fields = "__all__"
 
-class PackageCinnamon(forms.ModelForm):
+class PackageCinnamonForm(forms.ModelForm):
     class Meta:
         #Le pasamos el modelo al cual le va hacer el formulario
         model = PackageCinnamon
+        #
+        widgets={"Nombre":forms.TextInput(attrs={'placeholder':'Paquete','name':'nombre',
+                                               'id':'Nombre',
+                                               'class':'validate'}),
+                 }
+        labels = {
+            'Nombre': _('Nombre del Paquete'),
+        }
         #Le pasamos que campos del modelo va a crear
         fields = "__all__"
 
-class PackageCinnamonEdu(forms.ModelForm):
+class PackageCinnamonEduForm(forms.ModelForm):
     class Meta:
         #Le pasamos el modelo al cual le va hacer el formulario
         model = PackageCinnamonEdu
+        #
+        widgets={"Nombre":forms.TextInput(attrs={'placeholder':'Paquete','name':'nombre',
+                                               'id':'Nombre',
+                                               'class':'validate'}),
+                 }
+        labels = {
+            'Nombre': _('Nombre del Paquete'),
+        }
         #Le pasamos que campos del modelo va a crear
         fields = "__all__"
 
-class PackageMate(forms.ModelForm):
+class PackageMateForm(forms.ModelForm):
     class Meta:
         #Le pasamos el modelo al cual le va hacer el formulario
         model = PackageGeneric
+        #
+        widgets={"Nombre":forms.TextInput(attrs={'placeholder':'Paquete','name':'nombre',
+                                               'id':'Nombre',
+                                               'class':'validate'}),
+                 }
+        labels = {
+            'Nombre': _('Nombre del Paquete'),
+        }
         #Le pasamos que campos del modelo va a crear
         fields = "__all__"
 
-class PackageMateEdu(forms.ModelForm):
+class PackageMateEduForm(forms.ModelForm):
     class Meta:
         #Le pasamos el modelo al cual le va hacer el formulario
         model = PackageMateEdu
+        #
+        widgets={"Nombre":forms.TextInput(attrs={'placeholder':'Paquete','name':'nombre',
+                                               'id':'Nombre',
+                                               'class':'validate'}),
+                 }
+        labels = {
+            'Nombre': _('Nombre del Paquete'),
+        }
         #Le pasamos que campos del modelo va a crear
         fields = "__all__"

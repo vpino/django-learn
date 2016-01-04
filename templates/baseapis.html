@@ -13,6 +13,28 @@
 
     <body>
 
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{% url "generic" %}">Paquetes Genericos</a></li>
+            <li><a href="{% url "generic_edu" %}">Paquetes Genericos Educativos </a></li>
+            <li class="divider"></li>
+            <li><a href="{% url "package_cinnamon" %}">Paquetes de Cinnamon </a></li>
+            <li><a href="{% url "package_cinnamon_edu" %}"> Paquetes de Cinnamon Educativo </a></li>
+            <li class="divider"></li>
+            <li><a href="{% url "package_mate" %}">Paquetes de Mate</a></li>
+            <li><a href="{% url "package_mate_edu" %}">Paquetes de Mate Educativo</a></li>
+        </ul>
+
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="{% url "generic" %}">Paquetes Genericos</a></li>
+            <li><a href="{% url "generic_edu" %}">Paquetes Genericos Educativos </a></li>
+            <li class="divider"></li>
+            <li><a href="{% url "package_cinnamon" %}">Paquetes de Cinnamon </a></li>
+            <li><a href="{% url "package_cinnamon_edu" %}"> Paquetes de Cinnamon Educativo </a></li>
+            <li class="divider"></li>
+            <li><a href="{% url "package_mate" %}">Paquetes de Mate</a></li>
+            <li><a href="{% url "package_mate_edu" %}">Paquetes de Mate Educativo</a></li>
+        </ul>
+
         <nav class="white" role="navigation">
 
             <div class="nav-wrapper container">
@@ -21,17 +43,19 @@
 
                 <ul class="right hide-on-med-and-down">
 
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">GitLab</a></li>
-                    <li><a href="#">Canaima</a></li>
+                    <li><a href="{% url "homepage" %}">Inicio</a></li>
+                    <li><a href="http://gitlab.canaima.softwarelibre.gob.ve/">GitLab</a></li>
+                    <li><a href="">Canaima</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Lista de Paquetes<i class="material-icons right">arrow_drop_down</i></a></li>
 
                 </ul>
 
               <ul id="nav-mobile" class="side-nav">
 
-                  <li><a href="#">Inicio</a></li>
-                  <li><a href="#">GitLab</a></li>
+                  <li><a href="{% url "homepage" %}">Inicio</a></li>
+                  <li><a href="http://gitlab.canaima.softwarelibre.gob.ve/">GitLab</a></li>
                   <li><a href="#">Canaima</a></li>
+                  <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Lista de Paquetes<i class="material-icons right">arrow_drop_down</i></a></li>
 
               </ul>
 
@@ -44,6 +68,9 @@
         <div id="content">
             {% block content %} {% endblock %}
         </div>
+
+
+        <div id="footer"></div>
 
     </body>
 

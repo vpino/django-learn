@@ -30,5 +30,22 @@ urlpatterns = [
     url(r'^generic/$', 'apis.views.package_generic', name='generic'),
     url(r'^generic/create/$', 'apis.views.generic_create', name='generic_create'),
     url(r'^generic/edit/(?P<package_id>\d+)/$', 'apis.views.generic_edit', name='generic_edit'),
+    url(r'^packages/genericedu/$', 'apis.views.package_generic_edu', name='generic_edu'),
+    url(r'^packages/genericedu/create/$', 'apis.views.generic_edu_create', name='generic_edu_create'),
+    url(r'^packages/genericedu/edit/(?P<package_id>\d+)/$', 'apis.views.generic_edu_edit', name='generic_edu_edit'),
+    url(r'^packages/cinnamon/$', 'apis.views.package_cinnamon', name='package_cinnamon'),
+    url(r'^packages/cinnamon/create/$', 'apis.views.package_cinnamon_create', name='package_cinnamon_create'),
+    url(r'^packages/cinnamon/edit/(?P<package_id>\d+)/$', 'apis.views.package_cinnamon_edit', name='package_cinnamon_edit'),
+    url(r'^packages/cinnamon/edu/$', 'apis.views.package_cinnamon_edu', name='package_cinnamon_edu'),
+    url(r'^packages/cinnamon/edu/create/$', 'apis.views.package_cinnamon_edu_create', name='package_cinnamon_edu_create'),
+    url(r'^packages/cinnamon/edu/edit/(?P<package_id>\d+)/$', 'apis.views.package_cinnamon_edu_edit', name='package_cinnamon_edu_edit'),
+    url(r'^packages/mate/$', 'apis.views.package_mate', name='package_mate'),
+    url(r'^packages/mate/create/$', 'apis.views.package_mate_create', name='package_mate_create'),
+    url(r'^packages/mate/edit/(?P<package_id>\d+)/$', 'apis.views.package_mate_edit', name='package_mate_edit'),
+    url(r'^packages/mate/edu/$', 'apis.views.package_mate_edu', name='package_mate_edu'),
+    url(r'^packages/mate/edu/create/$', 'apis.views.package_mate_edu_create', name='package_mate_edu_create'),
+    url(r'^packages/mate/edu/edit/(?P<package_id>\d+)/$', 'apis.views.package_mate_edu_edit', name='package_mate_edu_edit')
+
+
 
 ]

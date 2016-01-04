@@ -42,7 +42,7 @@ def login_page(request):
                               context_instance=RequestContext(request))
 
 def homepage(request):
-    return render_to_response('homepage.html',
+    return render_to_response('homeapis.html',
                               context_instance=RequestContext(request))
 
 def logout_view(request):

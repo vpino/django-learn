@@ -14,6 +14,28 @@
 
     <body>
 
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{% url "generic" %}">Paquetes Genericos</a></li>
+            <li><a href="{% url "generic_edu" %}">Paquetes Genericos Educativos </a></li>
+            <li class="divider"></li>
+            <li><a href="{% url "package_cinnamon" %}">Paquetes de Cinnamon </a></li>
+            <li><a href="{% url "package_cinnamon_edu" %}"> Paquetes de Cinnamon Educativo </a></li>
+            <li class="divider"></li>
+            <li><a href="{% url "package_mate" %}">Paquetes de Mate</a></li>
+            <li><a href="{% url "package_mate_edu" %}">Paquetes de Mate Educativo</a></li>
+        </ul>
+
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="{% url "generic" %}">Paquetes Genericos</a></li>
+            <li><a href="{% url "generic_edu" %}">Paquetes Genericos Educativos </a></li>
+            <li class="divider"></li>
+            <li><a href="{% url "package_cinnamon" %}">Paquetes de Cinnamon </a></li>
+            <li><a href="{% url "package_cinnamon_edu" %}"> Paquetes de Cinnamon Educativo </a></li>
+            <li class="divider"></li>
+            <li><a href="{% url "package_mate" %}">Paquetes de Mate</a></li>
+            <li><a href="{% url "package_mate_edu" %}">Paquetes de Mate Educativo</a></li>
+        </ul>
+
         <nav class="white" role="navigation">
 
             <div class="nav-wrapper container">
@@ -22,17 +44,19 @@
 
                 <ul class="right hide-on-med-and-down">
 
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">GitLab</a></li>
-                    <li><a href="#">Canaima</a></li>
+                    <li><a href="{% url "homepage" %}">Inicio</a></li>
+                    <li><a href="http://gitlab.canaima.softwarelibre.gob.ve/">GitLab</a></li>
+                    <li><a href="http://canaima.softwarelibre.gob.ve/">Canaima</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Lista de Paquetes<i class="material-icons right">arrow_drop_down</i></a></li>
 
                 </ul>
 
               <ul id="nav-mobile" class="side-nav">
 
-                  <li><a href="#">Inicio</a></li>
-                  <li><a href="#">GitLab</a></li>
-                  <li><a href="#">Canaima</a></li>
+                  <li><a href="{% url "homepage" %}">Inicio</a></li>
+                  <li><a href="http://gitlab.canaima.softwarelibre.gob.ve/">GitLab</a></li>
+                  <li><a href="http://canaima.softwarelibre.gob.ve/">Canaima</a></li>
+                  <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Lista de Paquetes<i class="material-icons right">arrow_drop_down</i></a></li>
 
               </ul>
 
@@ -60,51 +84,52 @@
             <div class="parallax"><img src="{% static "img/canaima_wallpaper_3.jpg" %}" alt=""></div>
     </div>
 
- <div class="container">
-    <div class="section">
+     <div class="container">
+        <div class="section">
 
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+          <!--   Icon Section   -->
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                <h5 class="center">Speeds up development</h5>
 
-            <p class="light">We did most of the heavy lifting for you to
-                provide a default stylings that incorporate our custom components.
-                Additionally, we refined animations and transitions to provide a smoother
-                experience for developers.
-            </p>
+                <p class="light">We did most of the heavy lifting for you to
+                    provide a default stylings that incorporate our custom components.
+                    Additionally, we refined animations and transitions to provide a smoother
+                    experience for developers.
+                </p>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+                <h5 class="center">Canaima Semilla </h5>
+
+                <p class="light">Canaima Semilla es un paquete diseñado para facilitar a individuales,
+                    colectivos e instituciones la creación de distribuciones GNU/Linux personalizadas y
+                    adaptadas a sus necesidades (lo que conocemos como sabores), partiendo de la Metadistribución
+                    Canaima GNU/Linux.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+                <h5 class="center">Easy to work with</h5>
+
+                <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we
-                were able to create a framework that incorporates components and animations
-                that provide more feedback to users. Additionally, a single underlying
-                responsive system across all platforms allow for a more unified
-                user experience.
-            </p>
-
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
         </div>
       </div>
 
-    </div>
-  </div>
+  </body>
 
     <footer class="page-footer teal">
         <div class="container">

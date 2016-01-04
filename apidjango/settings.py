@@ -59,7 +59,7 @@ ROOT_URLCONF = 'apidjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/Laura Gonzalez/Documents/django/apidjango/templates'],
+        'DIRS': ['/home/victor/Documentos/django-learn/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
